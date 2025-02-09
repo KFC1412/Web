@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>计时器</title> 
+<script>
+var c=0;
+var t;
+var timer_is_on=0;
+function timedCount(){
+	document.getElementById('txt').value=c;
+	c=c+1;
+	t=setTimeout(function(){timedCount()},1000);
+}
+function doTimer(){
+	if (!timer_is_on){
+		timer_is_on=1;
+		timedCount();
+	}
+}
+function stopCount(){
+	clearTimeout(t);
+	timer_is_on=0;
+}
+function clsCount(){
+	clearTimeout(t);
+	c=0;
+}
+</script>
+</head>
+<body>
+	
+<form>
+<input type="button" value="开始!" onclick="doTimer()" />
+<input type="text" id="txt" />
+<input type="button" value="停止!" onclick="stopCount()" />
+<input type="button" value="清除!" onclick="clsCount()" />
+</form>
+<p>
+单击开始按钮，按下时开始计数，输入框将从0开始一直计数。单击停止按钮，按下时停止计数，再次点击开始按钮，又再次开始计数。
+</p>
+<p>
+清除：先按下“清除”，再按下“停止”，计时重置，最后按下“开始”从0开始计时
+</p>
+</body>
+	
+</html>

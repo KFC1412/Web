@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" href="img/logo.png" sizes="16x16">
+	<title>主页 Home</title>
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+	<meta name="last-modified" content="2024-02-18T00:25:00Z">
+	<meta http-equiv="refresh" content="3600">
+
+
+</head>
+
+<body>
+	<div class="all">
+
+		<!-- CSS -->
+
+		<link rel="stylesheet" href="css/document.css">
+		<link rel="stylesheet" href="css/index.css">
+
+
+
+		<!-- TIME -->
+		<div class="wz">[
+			<!--文字内容!--><span id="localtime"></span>
+			<script type="text/javascript" src="css/time.js">
+			</script>]
+		</div>
+		<!-- -->
+
+		<hr>
+
+		<!-- 每日一语 -->
+
+		<div class="wz" id="pageyy">
+			<p class="dashed">
+				<script type="text/javascript" src="css/yiyan.js">
+				</script>
+			</p>
+		</div>
+
+		<nav>
+			<div class="menu-btn">
+				<br>
+				<div class="links"><a href="ny.html">[ 高考倒计时 ]</a></div>
+				<div class="line line--2"></div>
+			</div>
+			<div class="nav-links" style="text-align: center;">
+				<a href="/" class="link"></a>
+			</div>
+		</nav>
+
+
+		<button onclick="myFunction()">高考加油</button>
+		<script>
+			function myFunction() {
+				setTimeout(function () {
+					alert("高考加油！祝金榜题名！");
+					document.querySelector('button').style.backgroundColor = 'lightblue';
+				}, 1000);
+			}
+		</script>
+
+
+		<br>
+
+		<!-- list -->
+		<hr>
+
+		<script type="text/javascript" src="list.js"></script>
+
+		<hr>
+
+		<!-- 版权声明 -->
+		<div>Ccompany ? BGR FC 2024</div>
+		<div><a href="http://ynqjdyzx.com/">[ http://ynqjdyzx.com/ ]</a></div>
+		<!-- 公告引用 -->
+		<script type="text/javascript" src="things.js"></script>
+		<hr>
+		<div>
+			<script src="css/fwcs.js"></script>
+		</div><!-- 访问查询（服务器） -->
+		<div>
+			<script src="css/sbxx.js"></script>
+		</div><!-- 设备信息 -->
+		<div>
+			<script src="css/khdxx.js"></script>
+		</div><!-- 客户端信息 -->
+		<hr>
+<div>
+    <p>页面将在 <span id="countdown">--</span> 秒后刷新</p><!--定时刷新-->
+</div>
+		
+	</div>
+
+	<script src="css/spk.js"></script><!-- 视频卡（显卡）信息 -->
+
+	<!--欢迎，用于服务器网页
+<script  src="css/hello.js"></script>
+<body onload="checkCookie()"></body>
+-->
+
+<!--定时刷新-->
+<script>
+    var countdownElement = document.getElementById('countdown');
+    var countdownValue = 60; // 60秒倒计时
+// 更新倒计时并刷新页面
+    function updateCountdown() {
+        countdownElement.textContent = countdownValue;
+        countdownValue--;
+
+        if (countdownValue < 0) {
+            clearInterval(countdownInterval);
+// 刷新页面
+            location.reload();
+        }
+    }
+// 设置每秒更新一次倒计时
+    var countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
+	
+	
+	
+	<style type="text/css">
+	</style>
+
+	<script type="text/javascript">
+	</script>
+</body>
+
+</html>
